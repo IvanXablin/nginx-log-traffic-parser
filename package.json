@@ -1,0 +1,20 @@
+{
+  "name": "nginx-traffic-parser",
+  "version": "1.0.0",
+  "description": "This library is needed for parsing nginx traffic-accounting-nginx-module logs",
+  "main": "index.ts",
+  "scripts": {
+    "build": "npx tsc",
+    "start": "node dist/index.js",
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\""
+  },
+  "author": "IvanXablin",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.8.9",
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
