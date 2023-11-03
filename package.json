@@ -1,8 +1,10 @@
 {
-  "name": "nginx-traffic-parser",
+  "name": "nginx-log-traffic-parser",
   "version": "1.0.0",
+  "type": "module",
+  "types": "dist/index.d.ts",
   "description": "This library is needed for parsing nginx traffic-accounting-nginx-module logs",
-  "main": "index.ts",
+  "main": "dist/index.js",
   "scripts": {
     "build": "npx tsc",
     "start": "node dist/index.js",
@@ -10,6 +12,11 @@
   },
   "author": "IvanXablin",
   "license": "ISC",
+  "files": ["dist", "README.md", "package.json"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IvanXablin/nginx-traffic-parser"
+  },
   "devDependencies": {
     "@types/node": "^20.8.9",
     "concurrently": "^8.2.2",
