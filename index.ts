@@ -1,6 +1,7 @@
 import fs from "fs/promises"
 
 export type TrafficAccountingID = {
+  pid: number
   from: number
   to: number
   accounting_id: string
@@ -11,11 +12,11 @@ export type TrafficAccountingID = {
 
 const regexNumber: RegExp = /[^\d]/g
 
-const parser = async (path: string) => {
+const parser = async (path: string): Promise<TrafficAccountingID[]> => {
   const arrayOfTrafficAccountingID: TrafficAccountingID[] = []
 
-  const logs = await fs.readFile(path, { encoding: "utf8" })
-  const arrayOfLogs = logs.split('\n')
+  const logs: string = await fs.readFile(path, { encoding: "utf8" })
+  const arrayOfLogs: string[] = logs.split('\n')
 
   const arrayOfFilteredLogs = arrayOfLogs.filter(
     (item: string) => !item.includes('start http') && !item.includes('stop http')
@@ -23,6 +24,7 @@ const parser = async (path: string) => {
 
   for (let line of arrayOfFilteredLogs) {
     const traffic: TrafficAccountingID = {
+      pid: 0,
       from: 0,
       to: 0,
       accounting_id: '',
@@ -36,6 +38,12 @@ const parser = async (path: string) => {
     }
 
     for (let item of line.split('|')) {
+      if (item.includes('pid')) {
+        const pid = item.split(' ').pop()
+        if (pid) {
+          traffic.pid = parseInt(pid.replace(regexNumber, ''))
+        }
+      }
       if (item.includes('from')) {
         traffic.from = parseInt(item.replace(regexNumber, ''))
       }

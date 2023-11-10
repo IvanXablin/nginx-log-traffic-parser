@@ -1,0 +1,7 @@
+2023/11/10 06:47:04 [notice] 30#30: pid:30|from:1699598524|to:1699598566|accounting_id:default|requests:1|bytes_in:838|bytes_out:86348|latency_ms:7239090|upstream_latency_ms:7239089|101:1
+2023/11/10 06:47:04 [notice] 33#33: pid:33|from:1699598524|to:1699598566|accounting_id:default|requests:1|bytes_in:838|bytes_out:85948|latency_ms:7236268|upstream_latency_ms:7236269|101:1
+2023/11/10 06:47:04 [notice] 31#31: pid:31|from:1699598524|to:1699598566|accounting_id:default|requests:1|bytes_in:838|bytes_out:85950|latency_ms:7239061|upstream_latency_ms:7239061|101:1
+2023/11/10 06:47:05 [notice] 29#29: pid:29|from:1699598525|to:1699598567|accounting_id:default|requests:16|bytes_in:14245|bytes_out:281866|latency_ms:51|upstream_latency_ms:51|200:16
+2023/11/10 06:47:05 [notice] 40#40: pid:40|from:1699598525|to:1699598567|accounting_id:default|requests:9|bytes_in:6472|bytes_out:605341|latency_ms:0|upstream_latency_ms:0|200:9
+2023/11/10 06:32:04 [notice] 32#32: pid:32|from:1699597624|to:1699597886|accounting_id:web-reader.local.everyteka.ru|requests:1|bytes_in:492|bytes_out:351716|latency_ms:0|upstream_latency_ms:0|200:1
+2023/11/10 06:32:04 [notice] 30#30: pid:30|from:1699597624|to:1699597911|accounting_id:web-reader.local.everyteka.ru|requests:66|bytes_in:38129|bytes_out:10724728|latency_ms:572|upstream_latency_ms:576|200:57|304:8|404:1
