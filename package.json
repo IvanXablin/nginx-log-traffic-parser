@@ -1,6 +1,6 @@
 {
   "name": "nginx-log-traffic-parser",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "types": "dist/index.d.ts",
   "description": "This library is needed for parsing nginx traffic-accounting-nginx-module logs",
   "main": "dist/index.js",
